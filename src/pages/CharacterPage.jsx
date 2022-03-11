@@ -10,7 +10,7 @@ export default function CharacterPage() {
   return (
     <>
       {character ? (
-        <div className={styles.characterPage}>
+        <>
           <section className={styles.characterContainer}>
             <img
               className={styles.characterImg}
@@ -25,8 +25,7 @@ export default function CharacterPage() {
               Back
             </Link>
           </section>
-          <br />
-        </div>
+        </>
       ) : (
         <p className={styles.loadingWord}>Loading...</p>
       )}
