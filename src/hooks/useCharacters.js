@@ -7,7 +7,7 @@ export const useCharacters = () => {
   const [characters, setCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   let lastPage = localStorage.getItem("page");
-  const [page, setPage] = useState(lastPage ? lastPage : 1);
+  const [page, setPage] = useState(lastPage ? parseInt(lastPage) : 1);
   const getData = async () => {
     window.scrollTo({
       top: 0,
@@ -27,6 +27,7 @@ export const useCharacters = () => {
   useEffect(() => {
     getData();
     localStorage.setItem("page", page);
+    console.log(page);
   }, [page]);
 
   return {
