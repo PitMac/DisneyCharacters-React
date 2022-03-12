@@ -124,6 +124,27 @@
   background-color: #1a1b26;
 }
 
+.notFoundPage {
+  text-align: center;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.errorTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.errorSubtitle {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
 @media (max-width: 1350px) {
   .listContainer {
     grid-template-columns: repeat(4, 1fr);

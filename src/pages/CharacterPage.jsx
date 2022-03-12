@@ -4,8 +4,8 @@ import { useCharacter } from "../hooks/useCharacter";
 import styles from "../styles/Components.module.css";
 
 export default function CharacterPage() {
-  const params = useParams();
-  const { character } = useCharacter(params.id);
+  const { id } = useParams();
+  const { character } = useCharacter(id);
 
   return (
     <>
