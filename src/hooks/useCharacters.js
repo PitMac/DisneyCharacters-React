@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { getCharacters } from "../api/DisneyApi";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -6,7 +6,7 @@ import AOS from "aos";
 export const useCharacters = (id) => {
   const [characters, setCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [page, setPage] = useState(id ? id : 1);
+  const [page, setPage] = useState(id ? parseInt(id) : 1);
   const getData = async () => {
     window.scrollTo({
       top: 0,
