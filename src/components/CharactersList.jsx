@@ -3,10 +3,9 @@ import { useCharacters } from "../hooks/useCharacters";
 import { CharactersItem } from "./CharactersItem";
 import styles from "../styles/Components.module.css";
 import { NavigationButtons } from "./NavigationButtons";
-import { useParams } from "react-router-dom";
 
-export const CharactersList = () => {
-  const { id } = useParams();
+export const CharactersList = ({ params }) => {
+  const { id } = params;
   const { characters, page, setPage, isLoading } = useCharacters(id);
   return (
     <>

@@ -1,6 +1,6 @@
 import styles from "../styles/Components.module.css";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+import { Link } from "wouter";
 
 export const CharactersItem = ({ character }) => {
   return (
@@ -12,6 +12,7 @@ export const CharactersItem = ({ character }) => {
       <section>
         {character.imageUrl ? (
           <img
+            loading="lazy"
             className={styles.cardImg}
             src={character.imageUrl}
             alt={character.name}

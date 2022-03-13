@@ -104,26 +104,6 @@
   width: 100%;
 }
 
-.backButton {
-  cursor: pointer;
-  display: flex;
-  border: none;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  text-decoration: none;
-  color: #1a1b26;
-  background-color: white;
-  border-radius: 10px;
-  width: 90px;
-  height: 40px;
-  margin: 0px 10px;
-}
-.backButton:hover {
-  color: white;
-  background-color: #1a1b26;
-}
-
 .notFoundPage {
   text-align: center;
   align-items: center;

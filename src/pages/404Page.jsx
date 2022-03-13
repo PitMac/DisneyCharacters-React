@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "wouter";
 import styles from "../styles/Components.module.css";
 
 export default function NotFound() {

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Switch } from "wouter";
 import { CharactersList } from "./components/CharactersList";
 import { NavBar } from "./components/NavBar";
 import NotFound from "./pages/404Page";
@@ -8,13 +8,14 @@ function App() {
   return (
     <>
       <NavBar />
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<CharactersList />} />
-          <Route path="character/:id" element={<CharacterPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={CharactersList} />
+        <Route path="/:id" component={CharactersList} />
+        <Route path="/character/:id" component={CharacterPage} />
+        <Route>
+          <NotFound />
+        </Route>
+      </Switch>
     </>
   );
 }
