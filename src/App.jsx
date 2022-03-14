@@ -1,5 +1,6 @@
 import { Route, Switch } from "wouter";
 import { CharactersList } from "./components/CharactersList";
+import { Footer } from "./components/Footer";
 import { NavBar } from "./components/NavBar";
 import NotFound from "./pages/404Page";
 import CharacterPage from "./pages/CharacterPage";
@@ -16,6 +17,7 @@ function App() {
           <NotFound />
         </Route>
       </Switch>
+      <Footer />
     </>
   );
 }

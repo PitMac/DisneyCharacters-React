@@ -44,6 +44,11 @@
   gap: 15px;
 }
 
+.characterPage {
+  padding-bottom: 60px;
+  min-height: calc(100vh - 260px);
+}
+
 .characterContainer {
   text-align: center;
   color: white;
@@ -157,6 +162,10 @@
 }
 
 @media (max-width: 1000px) {
+  .characterPage {
+    padding-bottom: 20px;
+    min-height: calc(100vh - 180px);
+  }
   .listContainer {
     grid-template-columns: repeat(3, 1fr);
   }

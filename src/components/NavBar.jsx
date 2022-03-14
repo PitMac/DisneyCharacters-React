@@ -1,5 +1,4 @@
 import { useLocation } from "wouter";
-import { Link } from "wouter";
 import styles from "../styles/Components.module.css";
 
 export const NavBar = () => {
@@ -14,7 +13,11 @@ export const NavBar = () => {
       <button className={styles.title} onClick={handleHome}>
         Disney Characters
       </button>
-      <a className={styles.apiLink} href="https://disneyapi.dev/">
+      <a
+        className={styles.apiLink}
+        target="_blank"
+        href="https://disneyapi.dev/"
+      >
         API
       </a>
     </div>

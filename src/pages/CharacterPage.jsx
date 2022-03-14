@@ -7,7 +7,7 @@ export default function CharacterPage({ params }) {
   const { character } = useCharacter(id);
 
   return (
-    <>
+    <div className={styles.characterPage}>
       {character ? (
         <section className={styles.characterContainer}>
           <img
@@ -21,6 +21,6 @@ export default function CharacterPage({ params }) {
       ) : (
         <p className={styles.loadingWord}>Loading...</p>
       )}
-    </>
+    </div>
   );
 }
