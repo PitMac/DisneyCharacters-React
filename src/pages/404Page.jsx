@@ -1,12 +1,14 @@
 import { Link } from "wouter";
-import styles from "../styles/Components.module.css";
 
 export default function NotFound() {
   return (
-    <div className={styles.notFoundPage}>
-      <p className={styles.errorTitle}>404 Error</p>
-      <p className={styles.errorSubtitle}>Please back to the home!</p>
-      <Link className={styles.backButton} to="/">
+    <div className="w-9/12 flex flex-col text-center mt-20 m-auto">
+      <p className="text-white font-bold text-4xl">Ooops!</p>
+      <p className="text-white text-2xl">Please back to home!</p>
+      <Link
+        to="/"
+        className="text-slate-400 text-3xl hover:text-slate-200 font-bold"
+      >
         Back
       </Link>
     </div>

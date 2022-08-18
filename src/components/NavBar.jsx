@@ -1,5 +1,4 @@
 import { useLocation } from "wouter";
-import styles from "../styles/Components.module.css";
 
 export const NavBar = () => {
   const [location, setLocation] = useLocation();
@@ -9,17 +8,21 @@ export const NavBar = () => {
   };
 
   return (
-    <div className={styles.navBar}>
-      <button className={styles.title} onClick={handleHome}>
-        Disney Characters
-      </button>
-      <a
-        className={styles.apiLink}
-        target="_blank"
-        href="https://disneyapi.dev/"
-      >
-        API
-      </a>
-    </div>
+    <nav className="bg-slate-900  px-6 sm:px-4 py-4 rounded">
+      <div className="container flex flex-wrap justify-between items-center mx-auto">
+        <button onClick={handleHome} className="flex items-center">
+          <span className="self-center text-xl font-bold whitespace-nowrap text-slate-400 hover:text-white">
+            Disney Characters
+          </span>
+        </button>
+
+        <a
+          href=""
+          className="text-sm text-gray-300 font-semibold hover:underline"
+        >
+          API
+        </a>
+      </div>
+    </nav>
   );
 };

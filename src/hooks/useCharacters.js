@@ -5,8 +5,9 @@ import AOS from "aos";
 
 export const useCharacters = (id) => {
   const [characters, setCharacters] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(id ? parseInt(id) : 1);
+
   const getData = async () => {
     window.scrollTo({
       top: 0,
